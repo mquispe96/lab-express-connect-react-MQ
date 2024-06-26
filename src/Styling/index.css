@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: "nav" "main";
+}
+
+.nav {
+  border: 1px solid black;
+  grid-area: nav;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  background: rgb(2, 36, 61);
+  color: rgb(228, 209, 207);
+  padding: 2% 5%;
+}
+.nav button {
+  cursor: pointer;
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 1.5rem;
+  padding: 1%;
+}
+
+/*# sourceMappingURL=index.css.map */
