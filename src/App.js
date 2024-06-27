@@ -6,13 +6,13 @@ import NewLog from './Components/NewLog';
 import EditLog from './Components/EditLog';
 
 const App = () => {
-  //   <Route path='show/:id' element={<ShowLog />} />
   //   <Route path='create' element={<NewLog />} />
   //   <Route path='edit/:id' element={<EditLog />} />
   return (
     <Routes>
       <Route path="/" element={<NavBar />}>
         <Route index element={<Logs />} />
+        <Route path="show/:id" element={<ShowLog />} />
       </Route>
     </Routes>
   );

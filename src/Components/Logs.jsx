@@ -9,9 +9,7 @@ const Logs = () => {
   const [isloading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    axios.get(`${BASE_URL}`).then(res => {
-      setLogs(res.data);
-    });
+    axios.get(`${BASE_URL}`).then(res => setLogs(res.data));
     setTimeout(() => {
       setIsLoading(false);
     }, 3000);

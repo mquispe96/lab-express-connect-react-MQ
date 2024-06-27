@@ -2,9 +2,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  cursor: default;
 }
 
-html, body {
+html,
+body {
   width: 100vw;
   height: 100vh;
 }
@@ -31,16 +33,42 @@ html, body {
   background: transparent;
   color: white;
   border: 1px solid white;
-  border-radius: 1.5rem;
-  padding: 1%;
+  border-radius: 1rem;
+  padding: 0.5% 2%;
 }
 
 .logs {
-  border: 1px solid black;
   grid-area: "main";
   display: flex;
   flex-direction: column;
-  place-items: center;
+  padding: 2%;
+}
+
+table {
+  width: 100%;
+  border-radius: 1.3rem;
+  box-shadow: 0 0 10px 5px lightgrey;
+  overflow: hidden;
+}
+table td, table th {
+  padding: 1%;
+}
+table td span:hover, table th span:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+table thead {
+  background: rgb(238, 249, 251);
+  font-weight: bolder;
+}
+table tbody {
+  text-align: center;
+}
+table tbody tr:nth-child(odd) {
+  background: rgb(238, 249, 251);
+}
+table tbody tr:nth-child(even) {
+  background: rgb(251, 244, 239);
 }
 
 /*# sourceMappingURL=index.css.map */
