@@ -81,6 +81,7 @@ table tbody tr:nth-child(even) {
 }
 
 .log-container {
+  position: relative;
   grid-area: "main";
   display: grid;
   grid-template-rows: 1fr 10fr;
@@ -120,6 +121,39 @@ table tbody tr:nth-child(even) {
   transition: all 0.3s;
 }
 .log-container__content .btns button:hover {
+  color: rgb(2, 36, 61);
+  border: 1px solid rgb(2, 36, 61);
+}
+
+.delete-window {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  background: white;
+  width: 60%;
+  height: 30%;
+  border-radius: 1.3rem;
+  box-shadow: 0 0 10px 5px lightgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.delete-window__btns {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.delete-window__btns button {
+  cursor: pointer;
+  background: transparent;
+  color: lightgrey;
+  border: 1px solid lightgrey;
+  border-radius: 1rem;
+  padding: 5%;
+  transition: all 0.3s;
+}
+.delete-window__btns button:hover {
   color: rgb(2, 36, 61);
   border: 1px solid rgb(2, 36, 61);
 }

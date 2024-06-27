@@ -2,6 +2,7 @@ import {useEffect, useState} from 'react';
 import {useParams, useNavigate} from 'react-router-dom';
 import axios from 'axios';
 import Loading from './Loading';
+import DeleteLog from './DeleteLog';
 
 const ShowLog = () => {
   const BASE_URL = process.env.REACT_APP_BASE_URL;
@@ -9,6 +10,7 @@ const ShowLog = () => {
   const navigate = useNavigate();
   const [log, setLog] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [showDeleteWindow, setShowDeleteWindow] = useState(false);
 
   useEffect(() => {
     axios.get(`${BASE_URL}/${id}`).then(res => setLog(res.data));
@@ -32,10 +34,11 @@ const ShowLog = () => {
           <div className="btns">
             <button onClick={() => navigate('/')}>BACK</button>
             <button onClick={() => navigate(`/edit/${id}`)}>EDIT</button>
-            <button onClick={() => alert('Log deleted!')}>DELETE</button>
+            <button onClick={() => setShowDeleteWindow(true)}>DELETE</button>
           </div>
         </section>
       )}
+      {showDeleteWindow && <DeleteLog setShowDeleteWindow={setShowDeleteWindow} id={id} />}
     </main>
   );
 };
