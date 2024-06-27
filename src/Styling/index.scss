@@ -29,6 +29,9 @@ body {
   background: rgb(2, 36, 61);
   color: rgb(228, 209, 207);
   padding: 2% 5%;
+  h1 {
+    cursor: pointer;
+  }
   button {
     cursor: pointer;
     background: transparent;
@@ -181,7 +184,7 @@ body {
     .btns {
       display: flex;
       align-items: center;
-      button{
+      button {
         cursor: pointer;
         margin-left: 5%;
         background: transparent;

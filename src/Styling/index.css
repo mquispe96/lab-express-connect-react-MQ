@@ -28,6 +28,9 @@ body {
   color: rgb(228, 209, 207);
   padding: 2% 5%;
 }
+.nav h1 {
+  cursor: pointer;
+}
 .nav button {
   cursor: pointer;
   background: transparent;

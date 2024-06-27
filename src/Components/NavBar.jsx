@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <>
       <header className="nav">
-        <h1>Captain's Log</h1>
+        <h1 onClick={() => navigate('/')}>Captain's Log</h1>
         <button onClick={() => navigate('/create')}>New Log</button>
       </header>
       <Outlet />
