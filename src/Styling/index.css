@@ -50,33 +50,32 @@ body {
   flex-direction: column;
   padding: 2%;
 }
-
-table {
+.logs-container table {
   width: 100%;
   border-radius: 1.3rem;
   box-shadow: 0 0 10px 5px lightgrey;
   overflow: hidden;
 }
-table td,
-table th {
+.logs-container table td,
+.logs-container table th {
   padding: 1%;
 }
-table td span:hover,
-table th span:hover {
+.logs-container table td span:hover,
+.logs-container table th span:hover {
   cursor: pointer;
   text-decoration: underline;
 }
-table thead {
+.logs-container table thead {
   background: rgb(238, 249, 251);
   font-weight: bolder;
 }
-table tbody {
+.logs-container table tbody {
   text-align: center;
 }
-table tbody tr:nth-child(odd) {
+.logs-container table tbody tr:nth-child(odd) {
   background: rgb(238, 249, 251);
 }
-table tbody tr:nth-child(even) {
+.logs-container table tbody tr:nth-child(even) {
   background: rgb(251, 244, 239);
 }
 
@@ -154,6 +153,51 @@ table tbody tr:nth-child(even) {
   transition: all 0.3s;
 }
 .delete-window__btns button:hover {
+  color: rgb(2, 36, 61);
+  border: 1px solid rgb(2, 36, 61);
+}
+
+.edit-log,
+.create-log {
+  grid-area: "main";
+  padding: 2%;
+}
+.edit-log form,
+.create-log form {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  row-gap: 1rem;
+  padding: 2%;
+}
+.edit-log form .form-group,
+.create-log form .form-group {
+  display: flex;
+  align-items: center;
+}
+.edit-log form .form-group input,
+.create-log form .form-group input {
+  border: 1px solid lightgrey;
+  padding: 1%;
+  margin: 0 2%;
+}
+.edit-log form .btns,
+.create-log form .btns {
+  display: flex;
+  align-items: center;
+}
+.edit-log form .btns button,
+.create-log form .btns button {
+  cursor: pointer;
+  margin-left: 5%;
+  background: transparent;
+  color: lightgrey;
+  border: 1px solid lightgrey;
+  border-radius: 1rem;
+  padding: 2%;
+  transition: all 0.3s;
+}
+.edit-log form .btns button:hover,
+.create-log form .btns button:hover {
   color: rgb(2, 36, 61);
   border: 1px solid rgb(2, 36, 61);
 }

@@ -40,7 +40,7 @@ body {
     &:hover {
       box-shadow: 0 0 10px 5px white;
     }
-    &:active{
+    &:active {
       box-shadow: none;
     }
   }
@@ -51,34 +51,33 @@ body {
   display: flex;
   flex-direction: column;
   padding: 2%;
-}
-
-table {
-  width: 100%;
-  border-radius: 1.3rem;
-  box-shadow: 0 0 10px 5px lightgrey;
-  overflow: hidden;
-  td,
-  th {
-    padding: 1%;
-    span {
-      &:hover {
-        cursor: pointer;
-        text-decoration: underline;
+  table {
+    width: 100%;
+    border-radius: 1.3rem;
+    box-shadow: 0 0 10px 5px lightgrey;
+    overflow: hidden;
+    td,
+    th {
+      padding: 1%;
+      span {
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
       }
     }
-  }
-  thead {
-    background: rgb(238, 249, 251);
-    font-weight: bolder;
-  }
-  tbody {
-    text-align: center;
-    tr:nth-child(odd) {
+    thead {
       background: rgb(238, 249, 251);
+      font-weight: bolder;
     }
-    tr:nth-child(even) {
-      background: rgb(251, 244, 239);
+    tbody {
+      text-align: center;
+      tr:nth-child(odd) {
+        background: rgb(238, 249, 251);
+      }
+      tr:nth-child(even) {
+        background: rgb(251, 244, 239);
+      }
     }
   }
 }
@@ -120,15 +119,15 @@ table {
         padding: 2%;
         transition: all 0.3s;
         &:hover {
-          color: rgb(2, 36, 61);;
-          border: 1px solid rgb(2, 36, 61);;
+          color: rgb(2, 36, 61);
+          border: 1px solid rgb(2, 36, 61);
         }
       }
     }
   }
 }
 
-.delete-window{
+.delete-window {
   position: absolute;
   top: 30%;
   left: 20%;
@@ -141,11 +140,11 @@ table {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  &__btns{
+  &__btns {
     width: 50%;
     display: flex;
     justify-content: space-evenly;
-    button{
+    button {
       cursor: pointer;
       background: transparent;
       color: lightgrey;
@@ -154,8 +153,47 @@ table {
       padding: 5%;
       transition: all 0.3s;
       &:hover {
-        color: rgb(2, 36, 61);;
-        border: 1px solid rgb(2, 36, 61);;
+        color: rgb(2, 36, 61);
+        border: 1px solid rgb(2, 36, 61);
+      }
+    }
+  }
+}
+
+.edit-log,
+.create-log {
+  grid-area: 'main';
+  padding: 2%;
+  form {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    row-gap: 1rem;
+    padding: 2%;
+    .form-group {
+      display: flex;
+      align-items: center;
+      input {
+        border: 1px solid lightgrey;
+        padding: 1%;
+        margin: 0 2%;
+      }
+    }
+    .btns {
+      display: flex;
+      align-items: center;
+      button{
+        cursor: pointer;
+        margin-left: 5%;
+        background: transparent;
+        color: lightgrey;
+        border: 1px solid lightgrey;
+        border-radius: 1rem;
+        padding: 2%;
+        transition: all 0.3s;
+        &:hover {
+          color: rgb(2, 36, 61);
+          border: 1px solid rgb(2, 36, 61);
+        }
       }
     }
   }
