@@ -32,8 +32,8 @@ const ShowLog = () => {
             <p>{`Days since last crisis: ${log.daysSinceLastCrisis}`}</p>
           </div>
           <div className="btns">
-            <button onClick={() => navigate('/')}>BACK</button>
-            <button onClick={() => navigate(`/edit/${id}`)}>EDIT</button>
+            <button onClick={() => navigate('/logs')}>BACK</button>
+            <button onClick={() => navigate(`/logs/${id}/edit`)}>EDIT</button>
             <button onClick={() => setShowDeleteWindow(true)}>DELETE</button>
           </div>
         </section>

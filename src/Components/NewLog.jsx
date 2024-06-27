@@ -25,7 +25,7 @@ const NewLog = () => {
 
   const handleSubmit = () => {
     axios.post(`${BASE_URL}`, newLog).then(() => {
-      navigate('/');
+      navigate('/logs');
     });
   };
 
@@ -98,7 +98,7 @@ const NewLog = () => {
           <label htmlFor="false">False</label>
         </div>
         <div className="btns">
-          <button type="button" onClick={() => navigate('/')}>
+          <button type="button" onClick={() => navigate('/logs')}>
             Cancel
           </button>
           <button type="submit">Submit</button>

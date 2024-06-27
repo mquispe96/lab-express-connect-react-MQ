@@ -22,7 +22,7 @@ const EditLog = () => {
 
   const handleSubmit = () => {
     axios.put(`${BASE_URL}/${id}`, updatedLog).then(() => {
-      navigate(`/show/${id}`);
+      navigate(`/logs/${id}`);
     });
   };
 
@@ -105,7 +105,7 @@ const EditLog = () => {
             <label htmlFor="false">False</label>
           </div>
           <div className="btns">
-            <button type="button" onClick={() => navigate(`/show/${id}`)}>
+            <button type="button" onClick={() => navigate(`/logs/${id}`)}>
               Cancel
             </button>
             <button type='submit'>Save Changes</button>

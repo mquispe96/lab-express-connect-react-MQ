@@ -8,11 +8,11 @@ import EditLog from './Components/EditLog';
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<NavBar />}>
+      <Route path="/logs" element={<NavBar />}>
         <Route index element={<Logs />} />
-        <Route path="create" element={<NewLog />} />
-        <Route path="show/:id" element={<ShowLog />} />
-        <Route path="edit/:id" element={<EditLog />} />
+        <Route path="/logs/new" element={<NewLog />} />
+        <Route path="/logs/:id" element={<ShowLog />} />
+        <Route path="/logs/:id/edit" element={<EditLog />} />
       </Route>
     </Routes>
   );

@@ -9,7 +9,7 @@ const Log = ({log, idx}) => {
       <td>{mistakesWereMadeToday === true ? 'Yes' : 'No'}</td>
       <td>{captainName}</td>
       <td>
-        <span onClick={() => navigate(`/show/${idx}`)}>{title}</span>
+        <span onClick={() => navigate(`/logs/${idx}`)}>{title}</span>
       </td>
     </tr>
   );

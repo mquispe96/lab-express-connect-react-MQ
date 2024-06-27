@@ -14,7 +14,7 @@ const DeleteLog = ({setShowDeleteWindow, id}) => {
           onClick={() => {
             axios.delete(`${BASE_URL}/${id}`);
             setShowDeleteWindow(false);
-            navigate('/');
+            navigate('/logs');
           }}
         >
           YES
