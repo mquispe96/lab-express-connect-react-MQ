@@ -16,7 +16,7 @@ const Logs = () => {
   }, []);
 
   return (
-    <main className="logs">
+    <main className="logs-container">
       <h1>Logs</h1>
       {isloading ? (
         <Loading />

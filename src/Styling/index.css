@@ -35,9 +35,16 @@ body {
   border: 1px solid white;
   border-radius: 1rem;
   padding: 0.5% 2%;
+  transition: box-shadow 0.3s;
+}
+.nav button:hover {
+  box-shadow: 0 0 10px 5px white;
+}
+.nav button:active {
+  box-shadow: none;
 }
 
-.logs {
+.logs-container {
   grid-area: "main";
   display: flex;
   flex-direction: column;
@@ -50,10 +57,12 @@ table {
   box-shadow: 0 0 10px 5px lightgrey;
   overflow: hidden;
 }
-table td, table th {
+table td,
+table th {
   padding: 1%;
 }
-table td span:hover, table th span:hover {
+table td span:hover,
+table th span:hover {
   cursor: pointer;
   text-decoration: underline;
 }
@@ -69,6 +78,50 @@ table tbody tr:nth-child(odd) {
 }
 table tbody tr:nth-child(even) {
   background: rgb(251, 244, 239);
+}
+
+.log-container {
+  grid-area: "main";
+  display: grid;
+  grid-template-rows: 1fr 10fr;
+  padding: 2%;
+}
+.log-container__content {
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
+  grid-template-rows: repeat(5, 1fr);
+}
+.log-container__content .text {
+  grid-column: 2/span 1;
+  grid-row: 1/span 2;
+  background: rgb(238, 249, 251);
+  display: flex;
+  flex-direction: column;
+  padding: 0 5%;
+  justify-content: space-evenly;
+  font-size: 1.2rem;
+  border-radius: 1.3rem;
+  box-shadow: 0 0 10px 5px lightgrey;
+}
+.log-container__content .btns {
+  grid-column: 2/span 1;
+  grid-row: 3/span 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.log-container__content .btns button {
+  cursor: pointer;
+  background: transparent;
+  color: lightgrey;
+  border: 1px solid lightgrey;
+  border-radius: 1rem;
+  padding: 2%;
+  transition: all 0.3s;
+}
+.log-container__content .btns button:hover {
+  color: rgb(2, 36, 61);
+  border: 1px solid rgb(2, 36, 61);
 }
 
 /*# sourceMappingURL=index.css.map */
